@@ -94,7 +94,7 @@ group :test, :development do
   gem 'capistrano-unicorn', :git => 'git://github.com/sosedoff/capistrano-unicorn', :require => false
   gem 'thin'
   gem 'quiet_assets'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '2.43.0'
   gem 'bullet'
   gem 'guard-rspec', require: false
   gem 'guard-spork', require: false

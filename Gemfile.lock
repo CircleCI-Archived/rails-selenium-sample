@@ -193,7 +193,7 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    ffi (1.9.3)
+    ffi (1.9.5)
     ffi-rzmq (2.0.1)
       ffi-rzmq-core (>= 1.0.1)
     ffi-rzmq-core (1.0.3)
@@ -453,11 +453,11 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    selenium-webdriver (2.42.0)
-      childprocess (>= 0.5.0)
+    selenium-webdriver (2.43.0)
+      childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
-      websocket (~> 1.0.4)
+      websocket (~> 1.0)
     sidekiq (2.17.7)
       celluloid (>= 0.15.2)
       connection_pool (>= 1.0.0)
@@ -531,7 +531,7 @@ GEM
       rack
       raindrops (~> 0.7)
     uniform_notifier (1.6.2)
-    websocket (1.0.7)
+    websocket (1.2.1)
     xml-simple (1.1.4)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -611,7 +611,7 @@ DEPENDENCIES
   rvm-capistrano (= 1.3.0rc11)
   salesforcebulk
   sass-rails (~> 3.2.3)
-  selenium-webdriver
+  selenium-webdriver (= 2.43.0)
   sidekiq (~> 2.16)
   sidekiq-failures
   sidekiq-unique-jobs
