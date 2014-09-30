@@ -71,14 +71,13 @@ end
 group :development, :analytics do
   gem 'colorize'
   gem 'annotate'
-  gem 'better_errors'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'awesome_print'
   gem 'iruby', '~> 0.1.12', require: false
 end
 
 group :test do
-  gem 'rspec-sidekiq'
+  # gem 'rspec-sidekiq'
   # gem 'pry-rescue'
   # gem 'pry-stack_explorer'
 end
@@ -108,7 +107,6 @@ group :test, :development do
   gem 'jasmine-rails'
   gem 'pry'
   gem 'pry-stack_explorer'
-  gem 'pry-byebug'
   gem 'capistrano-slack', :git => 'git://github.com/j-mcnally/capistrano-slack', :require => false
   gem 'slackistrano', require: false
 end

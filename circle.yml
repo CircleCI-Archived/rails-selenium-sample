@@ -1,0 +1,6 @@
+machine:
+  ruby:
+    version: 1.9.3-p484
+dependencies:
+  pre:
+    - sudo apt-get update && sudo apt-get install firefox
