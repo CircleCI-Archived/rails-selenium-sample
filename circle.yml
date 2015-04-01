@@ -1,0 +1,6 @@
+dependencies:
+  pre:
+    - sudo sed -i "s|dbms.security.auth_enabled=true|dbms.security.auth_enabled=false|g" /etc/neo4j/neo4j-server.properties
+    - echo "dbms.pagecache.memory=500m" | sudo tee -a /etc/neo4j/neo4j-server.properties
+    - sudo nohup service neo4j-service start
+    - sleep 5
