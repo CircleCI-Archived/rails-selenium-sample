@@ -1,6 +1,6 @@
 dependencies:
-  pre:
-    - sudo sed -i "s|dbms.security.auth_enabled=true|dbms.security.auth_enabled=false|g" /etc/neo4j/neo4j-server.properties
-    - echo "dbms.pagecache.memory=500m" | sudo tee -a /etc/neo4j/neo4j-server.properties
-    - sudo nohup service neo4j-service start
-    - sleep 5
+  cache_directories:
+    - neo4j-community-2.1.7
+  post:
+    - if [[ ! -e neo4j-community-2.1.7 ]]; then wget http://neo4j.com/artifact.php?name=neo4j-community-2.1.7-unix.tar.gz -O neo4j-community-2.1.7-unix.tar.gz && tar -xzvf neo4j-community-2.1.7-unix.tar.gz; fi
+    - neo4j-community-2.1.7/bin/neo4j start: { background: true }
