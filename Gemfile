@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby File.read(".ruby-version").strip[/^[^-]+/]
-gem 'rails', '3.2.18'
+ruby "~> #{File.read(".ruby-version").strip[/^[^-]+/]}"
+gem 'rails', '~> 4.2.0'
 
 gem 'mysql2'
 gem 'haml'
@@ -24,13 +24,13 @@ gem 'airbrake'
 gem 'figaro'
 gem 'active_attr'
 gem 'attr_deprecated'
-gem 'active_shipping', git: 'git://github.com/Shopify/active_shipping.git', branch: 'ups_shipping_labels_improvements'
+gem 'active_shipping'
 gem 'desk'
 gem 'rails3-jquery-autocomplete'
 gem 'customerio'
 gem 'nested_form'
 gem 'newrelic_rpm'
-gem 'paper_trail', '~> 2'
+gem 'paper_trail'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
@@ -43,7 +43,7 @@ gem 'jbuilder'
 gem 'hashids'
 gem 'geokit'
 gem 'geokit-rails'
-gem 'sidekiq', '~> 2.16'
+gem 'sidekiq'
 gem 'sidetiq'
 gem 'sidekiq-unique-jobs'
 gem 'sidekiq-failures'
@@ -54,15 +54,10 @@ gem 'restforce'
 gem 'salesforcebulk'
 gem 'kaminari'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-  gem 'compass-rails'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'compass-rails'
+gem 'uglifier'
 
 group :production do
   gem 'unicorn'
@@ -72,7 +67,7 @@ group :development, :analytics do
   gem 'colorize'
   gem 'annotate'
   gem 'better_errors'
-  gem 'binding_of_caller', '~> 0.7.2'
+  gem 'binding_of_caller'
   gem 'awesome_print'
   gem 'iruby', '~> 0.1.12', require: false
 end
@@ -91,7 +86,7 @@ group :test, :development do
   gem 'capybara-webkit'
   gem 'ci_reporter'
   gem 'capistrano', :require => false
-  gem 'rvm-capistrano', '1.3.0rc11', :require => false
+  gem 'rvm-capistrano', :require => false
   gem 'capistrano-unicorn', :git => 'git://github.com/sosedoff/capistrano-unicorn', :require => false
   gem 'thin'
   gem 'quiet_assets'
@@ -99,10 +94,10 @@ group :test, :development do
   gem 'bullet'
   gem 'guard-rspec', require: false
   gem 'guard-spork', require: false
-  gem 'spork', '~> 0.9.0rc', require: false
+  gem 'spork', require: false
   gem 'rb-fsevent', require: false
   gem 'eyes_selenium'
-  gem 'simplecov', '~> 0.7.1', require: false
+  gem 'simplecov', require: false
   gem 'simplecov-rcov', require: false
   gem 'parallel_tests', require: false
   gem 'jasmine-rails'
